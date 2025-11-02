@@ -19,7 +19,7 @@ export default function GetApp() {
           <p className="text-lg text-white/90 max-w-md mx-auto md:mx-0">
             Start managing your job applications effortlessly with our web
             platform. Stay organized, get instant updates, and let your
-            assistant handle the heavy lifting — all from your browser.
+            assistant handle the heavy lifting all from your browser.
           </p>
 
           <div>

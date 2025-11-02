@@ -53,7 +53,7 @@ export default function Steps() {
           viewport={{ once: true }}
           className="text-lg text-gray-600 max-w-2xl mx-auto mt-3"
         >
-          We’ve simplified the job search process into four actionable steps —
+          We’ve simplified the job search process into four actionable steps
           designed to save time and maximize your success.
         </motion.p>
       </div>

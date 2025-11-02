@@ -35,10 +35,10 @@ export default function WhyWeAreBetter() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-extrabold text-gray-900">
-            Why We are Better for - <span className="text-[var(--color-primary)]">Professionals</span>
+            Why We are Better for  <span className="text-[var(--color-primary)]">Professionals</span>
           </h2>
           <p className="text-lg text-gray-600">
-            We go beyond traditional job tools — combining automation, human
+            We go beyond traditional job tools, combining automation, human
             expertise, and personalization to give you a smarter way to land
             opportunities that truly fit.
           </p>

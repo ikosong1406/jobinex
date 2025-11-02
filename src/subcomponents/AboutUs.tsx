@@ -31,7 +31,7 @@ export default function AboutUs() {
               Jobbinex is a professional job application assistant designed to
               help busy individuals outsource the job application process. We
               believe in making career advancement more efficient, structured,
-              and accessible to everyone — no matter how hectic your schedule
+              and accessible to everyone, no matter how hectic your schedule
               is.
             </p>
           </div>

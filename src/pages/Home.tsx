@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-              Outsource Your Job Applications —{" "}
+              Outsource Your Job Applications {" "}
               <span className="text-[var(--color-primary)]">Effortlessly.</span>
             </h1>
 

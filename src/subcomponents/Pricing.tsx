@@ -5,8 +5,8 @@ export default function Pricing() {
   const plans = [
     {
       name: "Starter",
-      price: "£19",
-      duration: "/week",
+      price: "£19.99",
+      duration: "/2weeks",
       description:
         "Perfect for individuals just starting out or applying to a few jobs per week.",
       features: [
@@ -19,8 +19,8 @@ export default function Pricing() {
     },
     {
       name: "Professional",
-      price: "£39",
-      duration: "/week",
+      price: "£39.99",
+      duration: "/2weeks",
       description:
         "Ideal for busy professionals who want consistent support with tailored job applications.",
       features: [
@@ -33,8 +33,8 @@ export default function Pricing() {
     },
     {
       name: "Elite",
-      price: "£59",
-      duration: "/week",
+      price: "£59.99",
+      duration: "/2weeks",
       description:
         "For executives or power users who want full coverage and strategic job application management.",
       features: [

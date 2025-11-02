@@ -45,7 +45,7 @@ export default function FAQSection() {
           We Know What You Think
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-          Here are some of the most common questions our users ask — and our clear answers to help you understand Jobbinex better.
+          Here are some of the most common questions our users ask, and our clear answers to help you understand Jobbinex better.
         </p>
       </div>
 
