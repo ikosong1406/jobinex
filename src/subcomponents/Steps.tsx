@@ -24,7 +24,7 @@ export default function Steps() {
       icon: <FaPaperPlane className="text-yellow-500" size={28} />,
       title: "3. Apply with Confidence",
       description:
-        "Your Jobbinex assistant handles the entire submission process — accurately and on time — ensuring no opportunity is missed.",
+        "Your Jobbinex assistant handles the entire submission process accurately and on time ensuring no opportunity is missed.",
     },
     {
       icon: <FaBriefcase className="text-purple-500" size={28} />,

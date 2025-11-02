@@ -14,7 +14,7 @@ export default function WhyWeAreBetter() {
     {
       title: "Time-Saving Automation",
       content:
-        "We handle job searches, application submissions, and follow-ups — saving you hours each week so you can focus on work or personal growth.",
+        "We handle job searches, application submissions, and follow-ups, saving you hours each week so you can focus on work or personal growth.",
     },
     {
       title: "Real Human Oversight",

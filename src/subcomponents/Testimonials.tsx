@@ -7,7 +7,7 @@ export default function Testimonials() {
       role: "Marketing Executive",
       image: "https://randomuser.me/api/portraits/women/68.jpg",
       quote:
-        "Jobbinex completely transformed my job search. My assistant handled everything — from applications to follow-ups — while I focused on my work.",
+        "Jobbinex completely transformed my job search. My assistant handled everything, from applications to follow-ups, while I focused on my work.",
     },
     {
       name: "Roy Dallas",

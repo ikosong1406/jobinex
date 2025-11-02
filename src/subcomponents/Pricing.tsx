@@ -71,7 +71,7 @@ export default function Pricing() {
           className="text-gray-200 max-w-2xl mx-auto mt-3"
         >
           Choose the plan that fits your job search goals. Upgrade, pause, or
-          cancel anytime — no hidden fees.
+          cancel anytime, no hidden fees.
         </motion.p>
       </div>
 

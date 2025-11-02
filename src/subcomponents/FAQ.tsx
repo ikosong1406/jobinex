@@ -18,7 +18,7 @@ export default function FAQSection() {
     {
       question: "Can I approve applications before they’re submitted?",
       answer:
-        "Yes. You have full control. Every job opportunity can be reviewed and approved before submission — ensuring only relevant positions are applied to.",
+        "Yes. You have full control. Every job opportunity can be reviewed and approved before submission ensuring only relevant positions are applied to.",
     },
     {
       question: "Are my details and data secure?",
@@ -28,7 +28,7 @@ export default function FAQSection() {
     {
       question: "What kind of jobs can I apply for through Jobbinex?",
       answer:
-        "You can apply for jobs across multiple sectors — from tech, marketing, and design to business, HR, and more. We match roles based on your preferences and skillset.",
+        "You can apply for jobs across multiple sectors from tech, marketing, and design to business, HR, and more. We match roles based on your preferences and skillset.",
     },
     {
       question: "Is Jobbinex available as a mobile app?",
