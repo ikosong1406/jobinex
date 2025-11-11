@@ -2,50 +2,69 @@ import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
 export default function Pricing() {
-  const plans = [
+const plans = [
     {
       name: "Starter",
-      price: "£19.99",
-      duration: "/2weeks",
+      price: 49.99, // no discount
+      duration: "/Monthly",
       description:
-        "Perfect for individuals just starting out or applying to a few jobs per week.",
+        "Perfect for individuals just starting out or applying to a few jobs per week. Get a professional foundation with our expert document creation.",
       features: [
-        "Up to 5 job applications weekly",
-        "1:1 assistant support",
+        "Up to 50+ job applications",
         "Application status tracking",
         "Weekly performance summary",
+        // Added features from the message
+        "Professionally Written CV & Cover Letter", // Core document creation
+        "Human-Written Guarantee (No AI)", // Quality assurance
+        "ATS Optimization for all documents",
       ],
+      oldPrice: null,
+      discount: 0,
       highlight: false,
     },
     {
       name: "Professional",
-      price: "£39.99",
-      duration: "/2weeks",
+      price: 99.99, // this is the NEW discounted price
+      oldPrice: 124.99, // original price before 20% off
+      duration: "/Monthly",
       description:
-        "Ideal for busy professionals who want consistent support with tailored job applications.",
+        "Ideal for busy professionals who want consistent support with tailored job applications and a complete hands-on service.",
       features: [
-        "Up to 15 job applications weekly",
-        "Dedicated assistant",
+        "Everything in Starter, plus:",
+        "Up to 100+ job applications",
         "Priority application review",
+        "Custom CV & cover letter optimization",
         "Weekly insights and optimization tips",
+        // Added features from the message
+        "LinkedIn Profile Refinement & Optimization", // Hands-on service
+        "Targeted Job Research Assistance", // Hands-on service
+        "Assisted Application Submissions", // Hands-on service
       ],
+      discount: 20,
       highlight: true,
     },
     {
       name: "Elite",
-      price: "£59.99",
-      duration: "/2weeks",
+      price: 249.99, // this is the NEW discounted price
+      oldPrice: 499.99, // original price before 50% off
+      duration: "/Monthly",
       description:
-        "For executives or power users who want full coverage and strategic job application management.",
+        "For executives or power users who want full coverage, strategic job application management, and end-to-end career advancement support.",
       features: [
+        "Everything in Professional, plus:",
         "Unlimited job applications",
-        "Full-time assistant access",
-        "Custom CV & cover letter optimization",
         "Detailed progress reports",
+        "Dedicated career strategist session",
+        "Full application management",
+        // Added features from the message
+        "Priority Service & Faster Turnaround", // Priority service
+        "One-to-One Interview Coaching Session", // High-level support
+        "Personal Brand Strategy & Crafting", // High-level support
       ],
+      discount: 50,
       highlight: false,
     },
-  ];
+];
 
   return (
     <section
@@ -70,8 +89,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-gray-200 max-w-2xl mx-auto mt-3"
         >
-          Choose the plan that fits your job search goals. Upgrade, pause, or
-          cancel anytime, no hidden fees.
+          At Jobbinex, every application is written by real people who understand how hiring really works. We don’t use AI or templates, we craft each document to reflect your unique strengths, experience, and goals. Choose the plan that fits your stage, ambition, and career direction.
         </motion.p>
       </div>
 
@@ -105,21 +123,51 @@ export default function Pricing() {
               {plan.description}
             </p>
 
-            <div className="flex items-end justify-center md:justify-start gap-1 mb-6">
-              <span
-                className={`text-5xl font-extrabold ${
-                  plan.highlight ? "text-gray-900" : "text-white"
-                }`}
-              >
-                {plan.price}
-              </span>
-              <span
-                className={`text-sm font-medium ${
-                  plan.highlight ? "text-gray-600" : "text-gray-300"
-                }`}
-              >
-                {plan.duration}
-              </span>
+            <div className="flex flex-col items-center md:items-start mb-6">
+              {/* Show old price if discounted */}
+              {plan.oldPrice && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className={`text-lg font-medium mb-1 flex items-center gap-2 ${
+                    plan.highlight ? "text-gray-600" : "text-gray-300"
+                  }`}
+                >
+                  <span className="relative">
+                    <span className="line-through text-red-500 opacity-80">
+                      £{plan.oldPrice.toFixed(2)}
+                    </span>
+                  </span>
+                  <span
+                    className={`px-2 py-[2px] text-xs rounded-full font-semibold ${
+                      plan.highlight
+                        ? "bg-green-100 text-green-700"
+                        : "bg-green-800 text-green-200"
+                    }`}
+                  >
+                    SAVE {plan.discount}%
+                  </span>
+                </motion.div>
+              )}
+
+              <div className="flex items-end gap-1">
+                <span
+                  className={`text-5xl font-extrabold ${
+                    plan.highlight ? "text-gray-900" : "text-white"
+                  }`}
+                >
+                  £{plan.price.toFixed(2)}
+                </span>
+                <span
+                  className={`text-sm font-medium ${
+                    plan.highlight ? "text-gray-600" : "text-gray-300"
+                  }`}
+                >
+                  {plan.duration}
+                </span>
+              </div>
             </div>
 
             <ul className="space-y-3 text-left">
@@ -144,15 +192,16 @@ export default function Pricing() {
             </ul>
 
             <div className="mt-8 text-center">
-              <button
-                className={`px-6 py-3 font-semibold rounded-full w-full ${
+              <a
+                className={`px-6 py-3 font-semibold rounded-full w-full flex justify-center ${
                   plan.highlight
                     ? "bg-[var(--color-primary)] text-black hover:bg-green-400"
                     : "bg-white/20 hover:bg-white/30"
                 } transition`}
+                href="https://app.jobbinex.com"
               >
                 Get Started
-              </button>
+              </a>
             </div>
           </motion.div>
         ))}

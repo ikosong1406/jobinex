@@ -9,7 +9,7 @@ export default function WhyWeAreBetter() {
     {
       title: "Personalized Assistance",
       content:
-        "Every Jobinex assistant learns your preferences and career goals, ensuring every application matches your professional profile perfectly.",
+        "Every Jobbinex assistant learns your preferences and career goals, ensuring every application matches your professional profile perfectly.",
     },
     {
       title: "Time-Saving Automation",
@@ -19,7 +19,7 @@ export default function WhyWeAreBetter() {
     {
       title: "Real Human Oversight",
       content:
-        "Unlike generic automation tools, Jobinex pairs you with real professionals who monitor and refine your applications for the best results.",
+        "Unlike generic automation tools, Jobbinex pairs you with real professionals who monitor and refine your applications for the best results.",
     },
   ];
 

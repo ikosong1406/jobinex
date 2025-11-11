@@ -43,7 +43,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg text-gray-200 max-w-md mx-auto md:mx-0">
-              Jobinex connects you with dedicated assistants who handle your job
+              Jobbinex connects you with dedicated assistants who handle your job
               applications, follow-ups, and submissions, so you can focus on
               work, life, and the interviews that matter.
             </p>

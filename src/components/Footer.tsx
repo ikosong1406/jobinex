@@ -97,7 +97,7 @@ export default function Footer() {
               <FaInstagram size={18} />
             </a>
             <a
-              href="mailto:info@jobinex.uk"
+              href="mailto:support@jobbinex.com"
               className="p-2 bg-white/10 rounded-full hover:bg-[var(--color-primary)] transition"
             >
               <FaEnvelope size={18} />
