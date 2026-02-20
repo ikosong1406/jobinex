@@ -7,19 +7,19 @@ export default function WhyWeAreBetter() {
 
   const reasons = [
     {
-      title: "Personalized Assistance",
+      title: "For London Professionals",
       content:
-        "Every Jobbinex assistant learns your preferences and career goals, ensuring every application matches your professional profile perfectly.",
+        "Outsource your entire job search. Our assistants handle applications, tailoring, and follow-ups so you can focus on interviews while we do the heavy lifting.",
     },
     {
-      title: "Time-Saving Automation",
+      title: "For Nigerian Freelancers",
       content:
-        "We handle job searches, application submissions, and follow-ups, saving you hours each week so you can focus on work or personal growth.",
+        "Access high-paying international gigs without payment barriers. Get paid directly in NGN via local bank transfers. No PayPal, no Stripe, no stress.",
     },
     {
       title: "Real Human Oversight",
       content:
-        "Unlike generic automation tools, Jobbinex pairs you with real professionals who monitor and refine your applications for the best results.",
+        "No fully automated bots. Whether you're hiring or freelancing, real professionals review every submission to ensure quality and fit.",
     },
   ];
 
@@ -35,12 +35,13 @@ export default function WhyWeAreBetter() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-extrabold text-gray-900">
-            Why We are Better for  <span className="text-[var(--color-primary)]">Professionals</span>
+            A Platform That Works for{" "}
+            <span className="text-[var(--color-primary)]">Both Sides</span>
           </h2>
           <p className="text-lg text-gray-600">
-            We go beyond traditional job tools, combining automation, human
-            expertise, and personalization to give you a smarter way to land
-            opportunities that truly fit.
+            Jobbinex is evolving. We still help London professionals outsource
+            their job applications — and now we're opening doors for Nigerian
+            talent to earn globally.
           </p>
 
           <div className="space-y-4">
@@ -87,7 +88,7 @@ export default function WhyWeAreBetter() {
         >
           <img
             src="https://tse4.mm.bing.net/th/id/OIP.GRkRTfe-tfa3Wno3XYKz9gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Jobbinex Professional Assistance"
+            alt="Jobbinex connecting London and Nigeria"
             className="rounded-xl shadow-lg w-full max-w-md mx-auto"
           />
         </motion.div>

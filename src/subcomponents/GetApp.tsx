@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaLaptop, FaMoneyBillWave, FaUsers } from "react-icons/fa";
 
 export default function GetApp() {
   return (
@@ -14,40 +15,38 @@ export default function GetApp() {
         {/* Left content */}
         <div className="md:w-1/2 text-center md:text-left space-y-5">
           <h2 className="text-4xl font-extrabold leading-tight">
-            Access Jobbinex Anywhere, Anytime
+            Your Gateway to{" "}
+            <span className="text-[var(--color-primary)]">
+              Global Opportunities
+            </span>
           </h2>
+
           <p className="text-lg text-white/90 max-w-md mx-auto md:mx-0">
-            Start managing your job applications effortlessly with our web
-            platform. Stay organized, get instant updates, and let your
-            assistant handle the heavy lifting all from your browser.
+            One platform, two powerful paths. London professionals outsource
+            their job search. Nigerian freelancers access international clients
+            and get paid in NGN.
           </p>
 
-          <div>
+          {/* Dual CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
             <a
               href="https://app.jobbinex.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 px-8 py-3 bg-white text-black font-semibold rounded-full transition"
+              className="inline-block px-8 py-3 bg-[var(--color-primary)] text-black font-semibold rounded-full hover:bg-green-400 transition text-center"
             >
-              Use Jobbinex Now
+              🇬🇧 Outsource Applications
+            </a>
+            <a
+              href="https://app.jobbinex.com/freelancer-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition text-center"
+            >
+              🇳🇬 Freelancer Portal
             </a>
           </div>
         </div>
-
-        {/* Right image */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="md:w-1/2 mt-10 md:mt-0 flex justify-center"
-        >
-          {/* <img
-            src="https://tse1.mm.bing.net/th/id/OIP.KWlEl8XnvRd7sBcUs-s66QHaEw?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Jobinex web platform"
-            className="w-[400px] max-w-full drop-shadow-2xl rounded-lg"
-          /> */}
-        </motion.div>
       </motion.div>
     </section>
   );

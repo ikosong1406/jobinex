@@ -4,33 +4,35 @@ import {
   FaClipboardList,
   FaPaperPlane,
   FaBriefcase,
+  FaDollarSign,
+  FaUsers,
 } from "react-icons/fa";
 
 export default function Steps() {
   const steps = [
     {
       icon: <FaUserCheck className="text-blue-500" size={28} />,
-      title: "1. Create Your Profile",
+      title: "1. Choose Your Path",
       description:
-        "Tell us about your career goals, experience, and the kind of jobs you’re targeting. Our system personalizes everything from there.",
+        "London professionals: Outsource your job applications. Nigerian freelancers: Sign up to access international gigs. One platform, two powerful paths.",
     },
     {
       icon: <FaClipboardList className="text-green-500" size={28} />,
-      title: "2. Match & Prepare",
+      title: "2. Set Your Preferences",
       description:
-        "We identify suitable openings and draft professional applications that align perfectly with your skills and preferences.",
+        "Job seekers: Define your dream role. Freelancers: Showcase your skills. Our system matches both sides for the perfect fit.",
     },
     {
       icon: <FaPaperPlane className="text-yellow-500" size={28} />,
-      title: "3. Apply with Confidence",
+      title: "3. We Handle the Work",
       description:
-        "Your Jobbinex assistant handles the entire submission process accurately and on time ensuring no opportunity is missed.",
+        "London clients: Our assistants submit applications for you. Nigerian talent: Get hired and deliver projects — we handle payments in NGN.",
     },
     {
       icon: <FaBriefcase className="text-purple-500" size={28} />,
-      title: "4. Land the Right Job",
+      title: "4. Success on Both Ends",
       description:
-        "Relax while we keep track of your applications and notify you of interviews and responses from employers.",
+        "Londoners land interviews without lifting a finger. Nigerians earn fair wages paid locally. Everyone wins.",
     },
   ];
 
@@ -44,7 +46,8 @@ export default function Steps() {
           viewport={{ once: true }}
           className="text-4xl font-extrabold text-gray-900"
         >
-          Easy Steps to Land Your Dream Job
+          How Jobbinex Works for{" "}
+          <span className="text-[var(--color-primary)]">Everyone</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -53,9 +56,19 @@ export default function Steps() {
           viewport={{ once: true }}
           className="text-lg text-gray-600 max-w-2xl mx-auto mt-3"
         >
-          We’ve simplified the job search process into four actionable steps
-          designed to save time and maximize your success.
+          Whether you're in London looking to save time or in Nigeria seeking
+          global opportunities — we've streamlined the process for you.
         </motion.p>
+
+        {/* Dual badges */}
+        <div className="flex justify-center gap-4 mt-4">
+          <span className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+            <FaBriefcase size={14} /> London Job Seekers
+          </span>
+          <span className="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+            <FaDollarSign size={14} /> Nigerian Freelancers
+          </span>
+        </div>
       </div>
 
       {/* Content layout */}
@@ -70,7 +83,7 @@ export default function Steps() {
         >
           <img
             src="https://tse2.mm.bing.net/th/id/OIP.B8SiYe2rUIYdtP2NAjkHewHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Easy Steps Illustration"
+            alt="Jobbinex dual marketplace connecting London and Nigeria"
             className="w-full max-w-md mx-auto rounded-xl shadow-lg"
           />
         </motion.div>
@@ -86,7 +99,7 @@ export default function Steps() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg hover:shadow-md transition"
+              className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg hover:shadow-md transition border-l-4 border-[var(--color-primary)]"
             >
               <div className="flex-shrink-0">{step.icon}</div>
               <div>

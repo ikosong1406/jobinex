@@ -1,4 +1,10 @@
-import { FaTwitter, FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaEnvelope,
+} from "react-icons/fa";
+import logo from "../assets/logo1.png";
 
 export default function Footer() {
   return (
@@ -6,11 +12,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <a
-            href="/"
-            className="text-3xl font-extrabold text-white tracking-wide"
-          >
-            <span className="text-[var(--color-primary)]">JOB</span>BINEX
+          <a href="/">
+            <img src={logo} alt="" className="w-[90px]" />
           </a>
           <p className="mt-4 text-gray-400 text-sm leading-relaxed max-w-xs">
             Jobbinex helps busy and working professionals outsource their job
@@ -24,17 +27,26 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="/" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="/"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="/about"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#pricing" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="#pricing"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 Pricing
               </a>
             </li>
@@ -46,22 +58,34 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">Support</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="#faq" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="#faq"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 FAQs
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="#contact"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 Contact Us
               </a>
             </li>
             <li>
-              <a href="#terms" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="#terms"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="#privacy" className="hover:text-[var(--color-primary)] transition">
+              <a
+                href="#privacy"
+                className="hover:text-[var(--color-primary)] transition"
+              >
                 Privacy Policy
               </a>
             </li>

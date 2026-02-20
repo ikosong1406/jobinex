@@ -33,47 +33,44 @@ export default function Home() {
           >
             <div className="bg-white/10 px-4 py-1 inline-block rounded-full">
               <p className="text-sm uppercase tracking-widest">
-                Discover your dream job
+                🚀 New: Now expanding to Nigeria
               </p>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-              Outsource Your Job Applications {" "}
+              Outsource Your Job Applications{" "}
               <span className="text-[var(--color-primary)]">Effortlessly.</span>
             </h1>
 
             <p className="text-lg text-gray-200 max-w-md mx-auto md:mx-0">
-              Jobbinex connects you with dedicated assistants who handle your job
-              applications, follow-ups, and submissions, so you can focus on
-              work, life, and the interviews that matter.
+              Jobbinex connects you with dedicated assistants who handle your
+              job applications, follow-ups, and submissions.
             </p>
 
-            <div>
+            {/* Dual CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                className="px-6 py-3 mt-4 bg-[var(--color-primary)] text-black font-semibold rounded-full transition"
+                className="px-6 py-3 bg-[var(--color-primary)] text-black font-semibold rounded-full transition text-center"
                 href="https://app.jobbinex.com"
               >
-                Get Started
+                Outsource Applications
+              </a>
+              <a
+                className="px-6 py-3 border border-white text-white font-semibold rounded-full hover:bg-white/10 transition text-center"
+                href="https://work.jobbinex.com"
+              >
+                🇳🇬 Freelancer Dashboard
               </a>
             </div>
-          </motion.div>
 
-          {/* Right side (image) */}
-          {/* <motion.div
-            className="hidden md:flex md:w-1/2 justify-end"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <img
-              src="/hero-illustration.png"
-              alt="Jobinex hero illustration"
-              className="w-[450px] max-w-full drop-shadow-2xl"
-            />
-          </motion.div> */}
+            {/* Trust Badge */}
+            <p className="text-sm text-gray-400 pt-4">
+              🇬🇧 London job seekers save time · 🇳🇬 Nigerian freelancers earn in
+              NGN
+            </p>
+          </motion.div>
         </div>
 
-        {/* Careers section (under text + image, inside hero) */}
         <Career />
       </section>
       <Better />

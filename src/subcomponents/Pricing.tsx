@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaGlobe, FaUsers, FaBriefcase } from "react-icons/fa";
 
 export default function Pricing() {
-const plans = [
+  const plans = [
     {
       name: "Starter",
-      price: 49.99, // no discount
+      price: 49.99,
       duration: "/Monthly",
       description:
         "Perfect for individuals just starting out or applying to a few jobs per week. Get a professional foundation with our expert document creation.",
       features: [
-        "Up to 50+ job applications",
+        "Up to 40+ job applications",
         "Application status tracking",
         "Weekly performance summary",
-        // Added features from the message
-        "Professionally Written CV & Cover Letter", // Core document creation
-        "Human-Written Guarantee (No AI)", // Quality assurance
+        "Professionally Written CV & Cover Letter",
+        "Human-Written Guarantee (No AI)",
         "ATS Optimization for all documents",
       ],
       oldPrice: null,
       discount: 0,
       highlight: false,
+      audience: "Job Seeker",
     },
     {
       name: "Professional",
-      price: 99.99, // this is the NEW discounted price
-      oldPrice: 124.99, // original price before 20% off
+      price: 99.99,
+      oldPrice: 124.99,
       duration: "/Monthly",
       description:
         "Ideal for busy professionals who want consistent support with tailored job applications and a complete hands-on service.",
@@ -35,18 +35,18 @@ const plans = [
         "Priority application review",
         "Custom CV & cover letter optimization",
         "Weekly insights and optimization tips",
-        // Added features from the message
-        "LinkedIn Profile Refinement & Optimization", // Hands-on service
-        "Targeted Job Research Assistance", // Hands-on service
-        "Assisted Application Submissions", // Hands-on service
+        "LinkedIn Profile Refinement & Optimization",
+        "Targeted Job Research Assistance",
+        "Assisted Application Submissions",
       ],
       discount: 20,
       highlight: true,
+      audience: "Job Seeker",
     },
     {
       name: "Elite",
-      price: 249.99, // this is the NEW discounted price
-      oldPrice: 499.99, // original price before 50% off
+      price: 249.99,
+      oldPrice: 499.99,
       duration: "/Monthly",
       description:
         "For executives or power users who want full coverage, strategic job application management, and end-to-end career advancement support.",
@@ -56,15 +56,32 @@ const plans = [
         "Detailed progress reports",
         "Dedicated career strategist session",
         "Full application management",
-        // Added features from the message
-        "Priority Service & Faster Turnaround", // Priority service
-        "One-to-One Interview Coaching Session", // High-level support
-        "Personal Brand Strategy & Crafting", // High-level support
+        "Priority Service & Faster Turnaround",
+        "One-to-One Interview Coaching Session",
+        "Personal Brand Strategy & Crafting",
       ],
       discount: 50,
       highlight: false,
+      audience: "Job Seeker",
     },
-];
+  ];
+
+  // Freelancer section data
+  const freelancerPricing = {
+    name: "Freelancer Plan",
+    fee: "20%",
+    description:
+      "For Nigerian freelancers accessing international gigs. We handle payment processing, currency conversion, and client vetting so you can focus on delivering quality work.",
+    features: [
+      "Access to UK & international clients",
+      "Get paid directly in NGN to your local bank",
+      "No PayPal or Stripe required",
+      "Client vetting & dispute protection",
+      "20% service fee deducted from payout",
+      "Keep 80% of every gig you complete",
+      "No upfront costs or monthly fees",
+    ],
+  };
 
   return (
     <section
@@ -80,7 +97,8 @@ const plans = [
           viewport={{ once: true }}
           className="text-4xl font-extrabold"
         >
-          Simple, Transparent Pricing
+          Pricing for{" "}
+          <span className="text-[var(--color-primary)]">Every Path</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -89,12 +107,27 @@ const plans = [
           viewport={{ once: true }}
           className="text-gray-200 max-w-2xl mx-auto mt-3"
         >
-          At Jobbinex, every application is written by real people who understand how hiring really works. We don’t use AI or templates, we craft each document to reflect your unique strengths, experience, and goals. Choose the plan that fits your stage, ambition, and career direction.
+          At Jobbinex, every application is written by real people who
+          understand how hiring really works. We don't use AI or templates, we
+          craft each document to reflect your unique strengths, experience, and
+          goals.
         </motion.p>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {/* Audience Toggle Hint */}
+      <div className="flex justify-center gap-6 mb-10 text-sm">
+        <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+          <FaBriefcase className="text-[var(--color-primary)]" />
+          <span>London Job Seekers: Monthly Plans</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+          <FaGlobe className="text-[var(--color-primary)]" />
+          <span>Nigerian Freelancers: 20% Service Fee</span>
+        </div>
+      </div>
+
+      {/* Pricing Cards - Job Seeker Plans */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         {plans.map((plan, i) => (
           <motion.div
             key={i}
@@ -108,6 +141,11 @@ const plans = [
                 : "bg-white/10 border-white/20"
             } transition-transform duration-300`}
           >
+            {/* Audience Badge */}
+            <span className="inline-block bg-[var(--color-primary)]/20 text-[var(--color-primary)] text-xs px-2 py-1 rounded-full mb-3">
+              {plan.audience}
+            </span>
+
             <h3
               className={`text-2xl font-bold mb-2 ${
                 plan.highlight ? "text-[#02160bff]" : "text-white"
@@ -206,6 +244,62 @@ const plans = [
           </motion.div>
         ))}
       </div>
+
+      {/* Freelancer Pricing Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto mt-10 bg-gradient-to-r from-[var(--color-primary)]/20 to-transparent rounded-3xl p-8 border border-[var(--color-primary)]/30"
+      >
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Left - Icon and Title */}
+          <div className="md:w-1/3 text-center md:text-left">
+            <div className="bg-[var(--color-primary)]/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4">
+              <FaGlobe className="text-[var(--color-primary)] text-3xl" />
+            </div>
+            <h3 className="text-3xl font-bold text-white">
+              {freelancerPricing.name}
+            </h3>
+            <div className="mt-2">
+              <span className="text-5xl font-extrabold text-[var(--color-primary)]">
+                {freelancerPricing.fee}
+              </span>
+              <span className="text-gray-300 text-lg ml-2">Service Fee</span>
+            </div>
+            <p className="text-gray-400 text-sm mt-1">
+              You keep 80% of earnings
+            </p>
+          </div>
+
+          {/* Right - Features */}
+          <div className="md:w-2/3">
+            <p className="text-gray-200 mb-4">
+              {freelancerPricing.description}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {freelancerPricing.features.map((feature, j) => (
+                <div key={j} className="flex items-center gap-2">
+                  <FaCheckCircle
+                    className="text-[var(--color-primary)] flex-shrink-0"
+                    size={16}
+                  />
+                  <span className="text-sm text-gray-200">{feature}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6">
+              <a
+                href="https://app.jobbinex.com/freelancer-dashboard"
+                className="inline-block px-8 py-3 bg-[var(--color-primary)] text-black font-semibold rounded-full hover:bg-green-400 transition"
+              >
+                Join as Freelancer
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

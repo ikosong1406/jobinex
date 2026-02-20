@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import logo from "../assets/logo1.png";
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -17,11 +18,8 @@ export default function Navbar() {
     <nav className="w-full bg-black text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Left - Logo */}
-        <Link
-          to="/"
-          className="text-2xl font-extrabold text-[var(--color-white)]"
-        >
-          <span className="text-[var(--color-primary)]">JOB</span>BINEX
+        <Link to="/">
+          <img src={logo} alt="" className="w-[90px]" />
         </Link>
 
         {/* Center - Desktop Nav Links */}
@@ -40,7 +38,7 @@ export default function Navbar() {
         {/* Right - Auth Buttons (Desktop) */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://app.jobbinex.com/login"
+            href="https://app.jobbinex.com/"
             className="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
           >
             Login
