@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaCheckCircle, FaGlobe, FaUsers, FaBriefcase } from "react-icons/fa";
+import { FaCheckCircle, FaGlobe, FaBriefcase } from "react-icons/fa";
 
 export default function Pricing() {
   const plans = [

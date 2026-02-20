@@ -5,7 +5,6 @@ import {
   FaPaperPlane,
   FaBriefcase,
   FaDollarSign,
-  FaUsers,
 } from "react-icons/fa";
 
 export default function Steps() {

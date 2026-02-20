@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FaLaptop, FaMoneyBillWave, FaUsers } from "react-icons/fa";
 
 export default function GetApp() {
   return (
