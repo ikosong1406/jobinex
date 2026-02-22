@@ -36,14 +36,14 @@ export default function Steps() {
   ];
 
   return (
-    <section className="bg-white text-gray-800 py-20 px-6 md:px-16">
+    <section className="bg-white text-gray-800 py-20 px-4 md:px-16">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-extrabold text-gray-900"
+          className="text-3xl font-extrabold text-gray-900"
         >
           How Jobbinex Works for{" "}
           <span className="text-[var(--color-primary)]">Everyone</span>
@@ -56,7 +56,7 @@ export default function Steps() {
           className="text-lg text-gray-600 max-w-2xl mx-auto mt-3"
         >
           Whether you're in London looking to save time or in Nigeria seeking
-          global opportunities — we've streamlined the process for you.
+          global opportunities, we've streamlined the process for you.
         </motion.p>
 
         {/* Dual badges */}

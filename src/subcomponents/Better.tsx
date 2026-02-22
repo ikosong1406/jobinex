@@ -24,7 +24,7 @@ export default function WhyWeAreBetter() {
   ];
 
   return (
-    <section className="bg-gray-100 text-gray-800 py-16 px-6 md:px-16">
+    <section className="bg-gray-100 text-gray-800 py-16 px-4 md:px-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Text Section */}
         <motion.div
@@ -34,7 +34,7 @@ export default function WhyWeAreBetter() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-extrabold text-gray-900">
+          <h2 className="text-3xl font-extrabold text-gray-900">
             A Platform That Works for{" "}
             <span className="text-[var(--color-primary)]">Both Sides</span>
           </h2>

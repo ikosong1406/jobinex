@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       {/* HERO SECTION */}
-      <section className="relative flex flex-col justify-between h-[80vh] md:h-[80vh] text-white">
+      <section className="relative flex flex-col justify-between h-[100vh] md:h-[100vh] text-white">
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -26,18 +26,18 @@ export default function Home() {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full w-full px-8 md:px-16">
           {/* Left side (text content) */}
           <motion.div
-            className="md:w-1/2 text-center md:text-left space-y-6 mt-20 md:mt-0"
+            className="md:w-1/2 text-center md:text-left space-y-6 mt-10 md:mt-0"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="bg-white/10 px-4 py-1 inline-block rounded-full">
               <p className="text-sm uppercase tracking-widest">
-                🚀 New: Now expanding to Nigeria
+                Now expanding to Nigeria
               </p>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
               Outsource Your Job Applications{" "}
               <span className="text-[var(--color-primary)]">Effortlessly.</span>
             </h1>

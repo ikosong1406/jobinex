@@ -85,7 +85,7 @@ export default function Pricing() {
 
   return (
     <section
-      className="text-white py-20 px-6 md:px-16"
+      className="text-white py-20 px-4 md:px-16"
       style={{ backgroundColor: "#02160bff" }}
       id="pricing"
     >
@@ -95,7 +95,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-extrabold"
+          className="text-3xl font-extrabold"
         >
           Pricing for{" "}
           <span className="text-[var(--color-primary)]">Every Path</span>
@@ -127,7 +127,7 @@ export default function Pricing() {
       </div>
 
       {/* Pricing Cards - Job Seeker Plans */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+      <div className="grid grid-cols- md:grid-cols-3 gap-8 mb-10">
         {plans.map((plan, i) => (
           <motion.div
             key={i}
@@ -137,7 +137,7 @@ export default function Pricing() {
             viewport={{ once: true }}
             className={`rounded-2xl p-8 shadow-xl border ${
               plan.highlight
-                ? "bg-white text-gray-900 border-transparent scale-105"
+                ? "bg-white text-gray-900 border-transparent"
                 : "bg-white/10 border-white/20"
             } transition-transform duration-300`}
           >
@@ -251,7 +251,7 @@ export default function Pricing() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-4xl mx-auto mt-10 bg-gradient-to-r from-[var(--color-primary)]/20 to-transparent rounded-3xl p-8 border border-[var(--color-primary)]/30"
+        className="mt-10 bg-gradient-to-r from-[var(--color-primary)]/20 to-transparent rounded-3xl p-6 border border-[var(--color-primary)]/30"
       >
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Left - Icon and Title */}

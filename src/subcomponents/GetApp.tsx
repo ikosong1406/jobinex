@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function GetApp() {
   return (
-    <section className="bg-white py-20 px-6 md:px-16">
+    <section className="bg-white py-20 px-4 md:px-16">
       {/* Inner colored container */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -13,14 +13,14 @@ export default function GetApp() {
       >
         {/* Left content */}
         <div className="md:w-1/2 text-center md:text-left space-y-5">
-          <h2 className="text-4xl font-extrabold leading-tight">
+          <h2 className="text-3xl font-extrabold leading-tight">
             Your Gateway to{" "}
             <span className="text-[var(--color-primary)]">
               Global Opportunities
             </span>
           </h2>
 
-          <p className="text-lg text-white/90 max-w-md mx-auto md:mx-0">
+          <p className="text-base text-white/90 max-w-md mx-auto md:mx-0">
             One platform, two powerful paths. London professionals outsource
             their job search. Nigerian freelancers access international clients
             and get paid in NGN.
