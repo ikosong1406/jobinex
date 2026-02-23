@@ -7,7 +7,7 @@ export default function WhyWeAreBetter() {
 
   const reasons = [
     {
-      title: "For London Professionals",
+      title: "For UK Professionals",
       content:
         "Outsource your entire job search. Our assistants handle applications, tailoring, and follow-ups so you can focus on interviews while we do the heavy lifting.",
     },
@@ -39,7 +39,7 @@ export default function WhyWeAreBetter() {
             <span className="text-[var(--color-primary)]">Both Sides</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Jobbinex is evolving. We still help London professionals outsource
+            Jobbinex is evolving. We still help UK professionals outsource
             their job applications — and now we're opening doors for Nigerian
             talent to earn globally.
           </p>
@@ -88,7 +88,7 @@ export default function WhyWeAreBetter() {
         >
           <img
             src="https://tse4.mm.bing.net/th/id/OIP.GRkRTfe-tfa3Wno3XYKz9gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Jobbinex connecting London and Nigeria"
+            alt="Jobbinex connecting UK and Nigeria"
             className="rounded-xl shadow-lg w-full max-w-md mx-auto"
           />
         </motion.div>

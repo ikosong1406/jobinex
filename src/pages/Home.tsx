@@ -65,7 +65,7 @@ export default function Home() {
 
             {/* Trust Badge */}
             <p className="text-sm text-gray-400 pt-4">
-              🇬🇧 London job seekers save time · 🇳🇬 Nigerian freelancers earn in
+              🇬🇧 UK job seekers save time · 🇳🇬 Nigerian freelancers earn in
               NGN
             </p>
           </motion.div>

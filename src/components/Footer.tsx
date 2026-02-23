@@ -59,22 +59,6 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li>
               <a
-                href="#faq"
-                className="hover:text-[var(--color-primary)] transition"
-              >
-                FAQs
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="hover:text-[var(--color-primary)] transition"
-              >
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a
                 href="#terms"
                 className="hover:text-[var(--color-primary)] transition"
               >

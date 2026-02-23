@@ -21,7 +21,7 @@ export default function GetApp() {
           </h2>
 
           <p className="text-base text-white/90 max-w-md mx-auto md:mx-0">
-            One platform, two powerful paths. London professionals outsource
+            One platform, two powerful paths. UK professionals outsource
             their job search. Nigerian freelancers access international clients
             and get paid in NGN.
           </p>

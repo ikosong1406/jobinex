@@ -118,7 +118,7 @@ export default function Pricing() {
       <div className="flex justify-center gap-6 mb-10 text-sm">
         <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
           <FaBriefcase className="text-[var(--color-primary)]" />
-          <span>London Job Seekers: Monthly Plans</span>
+          <span>UK Job Seekers: Monthly Plans</span>
         </div>
         <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
           <FaGlobe className="text-[var(--color-primary)]" />
