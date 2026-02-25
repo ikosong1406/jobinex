@@ -59,7 +59,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li>
               <a
-                href="#terms"
+                href="/terms"
                 className="hover:text-[var(--color-primary)] transition"
               >
                 Terms of Service
@@ -67,7 +67,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#privacy"
+                href="/privacy"
                 className="hover:text-[var(--color-primary)] transition"
               >
                 Privacy Policy
