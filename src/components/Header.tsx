@@ -27,9 +27,6 @@ export default function Navbar() {
           <Link to="/" className={linkClass("/")}>
             Home
           </Link>
-          <Link to="/about" className={linkClass("/about")}>
-            About
-          </Link>
           <a href="#pricing" className={linkClass("/features")}>
             Pricing
           </a>
@@ -71,13 +68,6 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
             >
               Home
-            </Link>
-            <Link
-              to="/about"
-              className={linkClass("/about")}
-              onClick={() => setMenuOpen(false)}
-            >
-              About
             </Link>
             <a
               href="#pricing"

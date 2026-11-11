@@ -3,23 +3,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
 export default function WhyWeAreBetter() {
-  const [active, setActive] = useState<number | null>(null);
+  const [active, setActive] = useState(0);
 
   const reasons = [
     {
-      title: "For UK Professionals",
+      title: "Focus on Your Career, Not Applications",
       content:
-        "Outsource your entire job search. Our assistants handle applications, tailoring, and follow-ups so you can focus on interviews while we do the heavy lifting.",
+        "Applying for jobs can take hours every week. Jobbinex takes that responsibility off your shoulders by searching for relevant opportunities and managing applications on your behalf, giving you more time for work, family, and personal commitments.",
     },
     {
-      title: "For Nigerian Freelancers",
+      title: "Applications Tailored to Your Goals",
       content:
-        "Access high-paying international gigs without payment barriers. Get paid directly in NGN via local bank transfers. No PayPal, no Stripe, no stress.",
+        "Your career goals are unique. We use your qualifications, experience, preferred industries, salary expectations, and location preferences to identify relevant opportunities and personalise your applications.",
     },
     {
-      title: "Real Human Oversight",
+      title: "Save Time and Reduce the Stress",
       content:
-        "No fully automated bots. Whether you're hiring or freelancing, real professionals review every submission to ensure quality and fit.",
+        "Forget repeatedly filling out application forms and searching through job boards. Let Jobbinex manage the application process while you concentrate on your current job and prepare for new opportunities.",
+    },
+    {
+      title: "Stay Updated on Your Progress",
+      content:
+        "Keep track of your job search with application status updates and progress reports. Know which opportunities you've applied for and stay informed as your applications progress.",
     },
   ];
 
@@ -34,47 +39,69 @@ export default function WhyWeAreBetter() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-extrabold text-gray-900">
-            A Platform That Works for{" "}
-            <span className="text-[var(--color-primary)]">Both Sides</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+            Why Choose{" "}
+            <span className="text-[var(--color-primary)]">Jobbinex?</span>
           </h2>
+
           <p className="text-lg text-gray-600">
-            Jobbinex is evolving. We still help UK professionals outsource
-            their job applications — and now we're opening doors for Nigerian
-            talent to earn globally.
+            Your job search deserves more than endless applications. Jobbinex
+            combines smart technology and professional support to help UK
+            workers find opportunities while we handle the application process
+            on their behalf.
           </p>
 
+          {/* Reasons Accordion */}
           <div className="space-y-4">
             {reasons.map((reason, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-sm overflow-hidden"
+              >
                 <button
                   onClick={() => setActive(active === index ? null : index)}
-                  className="flex items-center justify-between w-full px-5 py-3 text-left font-medium hover:bg-gray-50 transition"
+                  aria-expanded={active === index}
+                  className="flex items-center justify-between w-full px-5 py-4 text-left font-semibold hover:bg-gray-50 transition"
                 >
                   <div className="flex items-center gap-3">
-                    <FaCheckCircle className="text-[var(--color-primary)]" />
+                    <FaCheckCircle className="text-[var(--color-primary)] flex-shrink-0" />
                     <span>{reason.title}</span>
                   </div>
-                  <span className="text-xl">
+
+                  <span className="text-xl text-gray-500">
                     {active === index ? "−" : "+"}
                   </span>
                 </button>
 
-                <AnimatePresence>
+                <AnimatePresence initial={false}>
                   {active === index && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="px-5 pb-3 text-gray-600"
+                      className="overflow-hidden"
                     >
-                      {reason.content}
+                      <p className="px-5 pb-4 pl-12 text-sm leading-relaxed text-gray-600">
+                        {reason.content}
+                      </p>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ))}
+          </div>
+
+          {/* CTA */}
+          <div className="pt-3">
+            <a
+              href="https://app.jobbinex.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-7 py-3 bg-[var(--color-primary)] text-black font-semibold rounded-full hover:bg-green-400 transition"
+            >
+              Let Us Handle Your Applications →
+            </a>
           </div>
         </motion.div>
 
@@ -88,7 +115,7 @@ export default function WhyWeAreBetter() {
         >
           <img
             src="https://tse4.mm.bing.net/th/id/OIP.GRkRTfe-tfa3Wno3XYKz9gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Jobbinex connecting UK and Nigeria"
+            alt="Professional using Jobbinex job application management service"
             className="rounded-xl shadow-lg w-full max-w-md mx-auto"
           />
         </motion.div>

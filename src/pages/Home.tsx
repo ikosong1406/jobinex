@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import Career from "../components/Career";
 import Better from "../subcomponents/Better";
@@ -10,7 +11,8 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       {/* HERO SECTION */}
-      <section className="relative flex flex-col justify-between h-[100vh] md:h-[100vh] text-white">
+      <section className="relative flex flex-col justify-between min-h-screen text-white">
+
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -19,64 +21,69 @@ export default function Home() {
               "url('https://i.pinimg.com/originals/53/fd/d3/53fdd326b305f667bbe5272c59f3458c.gif')",
           }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
 
-        {/* Main content container */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full w-full px-8 md:px-16">
-          {/* Left side (text content) */}
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Main content */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between flex-1 w-full px-6 md:px-16">
+
+          {/* Left side - Text content */}
           <motion.div
-            className="md:w-1/2 text-center md:text-left space-y-6 mt-10 md:mt-0"
+            className="md:w-1/2 text-center md:text-left space-y-6 mt-20 md:mt-0"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-white/10 px-4 py-1 inline-block rounded-full">
-              <p className="text-sm uppercase tracking-widest">
-                Now expanding to Nigeria
-              </p>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Outsource Your Job Applications{" "}
-              <span className="text-[var(--color-primary)]">Effortlessly.</span>
+            {/* Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Your Job Search,{" "}
+              <span className="text-[var(--color-primary)]">
+                Our Responsibility.
+              </span>
             </h1>
 
-            <p className="text-lg text-gray-200 max-w-md mx-auto md:mx-0">
-              Jobbinex connects you with dedicated assistants who handle your
-              job applications, follow-ups, and submissions.
+            {/* Description */}
+            <p className="text-lg text-gray-200 max-w-xl mx-auto md:mx-0 leading-relaxed">
+              Stop spending hours searching and applying for jobs.
+              Jobbinex helps UK professionals and workers find relevant
+              opportunities while our team manages their job applications
+              on their behalf.
             </p>
 
-            {/* Dual CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
               <a
-                className="px-6 py-3 bg-[var(--color-primary)] text-black font-semibold rounded-full transition text-center"
+                className="px-8 py-3.5 bg-[var(--color-primary)] text-black font-semibold rounded-full hover:bg-green-400 hover:scale-105 transition duration-300 text-center shadow-lg"
                 href="https://app.jobbinex.com"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Outsource Applications
-              </a>
-              <a
-                className="px-6 py-3 border border-white text-white font-semibold rounded-full hover:bg-white/10 transition text-center"
-                href="https://work.jobbinex.com"
-              >
-                🇳🇬 Freelancer Dashboard
+                Outsource Your Job Search →
               </a>
             </div>
-
-            {/* Trust Badge */}
-            <p className="text-sm text-gray-400 pt-4">
-              🇬🇧 UK job seekers save time · 🇳🇬 Nigerian freelancers earn in
-              NGN
-            </p>
           </motion.div>
         </div>
 
-        <Career />
+        {/* Career categories */}
+        <div className="relative z-10">
+          <Career />
+        </div>
       </section>
+
+      {/* WHY CHOOSE JOBINEX */}
       <Better />
+
+      {/* HOW IT WORKS */}
       <Steps />
+
+      {/* PRICING */}
       <Pricing />
+
+      {/* TESTIMONIALS */}
       <Testimonials />
+
+      {/* FINAL CTA */}
       <GetApp />
     </main>
   );

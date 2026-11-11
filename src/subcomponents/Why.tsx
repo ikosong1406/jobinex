@@ -1,6 +1,6 @@
 import { FaClock, FaUserCheck, FaShieldAlt, FaHandsHelping } from "react-icons/fa";
 
-export default function WhyChooseJobinex() {
+export default function WhyChooseJobbinex() {
   return (
     <section className="bg-[#02160bff] text-white py-20 px-6 md:px-12">
       {/* Header */}
