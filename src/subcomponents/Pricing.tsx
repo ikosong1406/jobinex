@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -6,8 +5,8 @@ export default function Pricing() {
   const plans = [
     {
       name: "Starter",
-      price: 79.99,
-      oldPrice: 99.99,
+      price: 59.99,
+      oldPrice: 79.99,
       discount: 20,
       duration: "/Monthly",
       description:
@@ -28,8 +27,8 @@ export default function Pricing() {
     },
     {
       name: "Professional",
-      price: 149.99,
-      oldPrice: 199.99,
+      price: 129.99,
+      oldPrice: 179.99,
       discount: 25,
       duration: "/Monthly",
       description:
@@ -66,9 +65,7 @@ export default function Pricing() {
           className="text-3xl md:text-4xl font-extrabold"
         >
           Simple, Transparent{" "}
-          <span className="text-[var(--color-primary)]">
-            Pricing
-          </span>
+          <span className="text-[var(--color-primary)]">Pricing</span>
         </motion.h2>
 
         <motion.p
@@ -78,10 +75,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-gray-200 max-w-2xl mx-auto mt-3"
         >
-          Your time is valuable. Let Jobbinex take the stress out
-          of applying for jobs. Choose a plan that suits your career
-          goals and let our team manage your applications while you
-          focus on your next opportunity.
+          Your time is valuable. Let Jobbinex take the stress out of applying
+          for jobs. Choose a plan that suits your career goals and let our team
+          manage your applications while you focus on your next opportunity.
         </motion.p>
       </div>
 

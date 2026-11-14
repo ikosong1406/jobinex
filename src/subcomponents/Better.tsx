@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
 export default function WhyWeAreBetter() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState<number | null>(0);
 
   const reasons = [
     {
